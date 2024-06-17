@@ -12,6 +12,8 @@ namespace WebApplication1.Entities
         public virtual DbSet<Medicament> Medicaments { get; set; }
         
         public virtual DbSet<Prescription> Prescriptions { get; set; }
+        
+        public virtual DbSet<User> Users { get; set; }
 
         public HospitalDbContext()
         {

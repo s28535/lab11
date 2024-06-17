@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using WebApplication1.Entities;
 using WebApplication1.Repositories;
 using WebApplication1.Services;
@@ -22,6 +23,8 @@ namespace WebApplication1
             builder.Services.AddTransient<IMedicamentRepository, MedicamentRepository>();
             builder.Services.AddTransient<IPatientRepository, PatientRepository>();
             builder.Services.AddTransient<IPrescriptionService, PrescriptionService>();
+            builder.Services.AddTransient<IUserRepository, UserRepository>();
+            builder.Services.AddTransient<IUserService, UserService>();
 
             builder.Services.AddDbContext<HospitalDbContext>(opt =>
             {
